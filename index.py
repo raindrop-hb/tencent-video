@@ -1,6 +1,6 @@
 import requests
 import json
-
+import time
 '''
 可直接部署在华为云函数流
 函数执行入口填：index.main_handler
@@ -32,16 +32,19 @@ def ten_video():
              }
     response_2 = requests.get(url_2,headers=headers_2)
     res_2 = json.loads(response_2.text)
+    time_1 = int(time.time())
+    time_2 = time.localtime(time_1)
+    now = time.strftime("%Y-%m-%d %H:%M:%S", time_2)
     log = "腾讯视频会员签到执行任务\n----------raindrop----------\n" + now
     try:
-        log = log + "\nret:" + str(res_1['ret']) + "\nerr_msg:" + res_1['err_msg'] + "\n签到获得积分:" + str(res_1['check_in_score'])
+        log = log + "\n签到获得积分:" + str(res_1['check_in_score'])
     except:
-        log=log+"\n腾讯视频签到异常，返回内容："+res_1
+        log=log+"\n腾讯视频签到异常，返回内容："+str(res_1)
         print(res_1)
     try:
-        log = log + "\nret:" + str(res_2['ret']) + "\nerr_msg:" + res_2['err_msg'] + "\n观看获得积分:" + str(res_2['check_in_score'])
+        log = log + "\n观看获得积分:" + str(res_2['check_in_score'])
     except:
-        log=log+"\n腾讯视频领取观看积分异常,返回内容："+res_2
+        log=log+"\n腾讯视频领取观看积分异常,返回内容："+str(res_2)
         print(res_2)
     url='https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/ReadTaskList?rpc_data=%7B%22business_id%22:%221%22,%22platform%22:3%7D'
     headers={'user-agent':'Mozilla/5.0 (Linux; Android 11; M2104K10AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046237 Mobile Safari/537.36 QQLiveBrowser/8.7.85.27058',
