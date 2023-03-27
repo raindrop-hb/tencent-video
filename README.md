@@ -52,6 +52,6 @@ cookie：腾讯pc登录时的cookie
 ### 抓取腾讯视频cookie
 ![image](https://user-images.githubusercontent.com/72308008/227908303-62c321e8-dfb9-4421-bcab-7a3a1caf73ea.png)
 
-1.电脑访问https://film.qq.com/vip/priv.html
+1.电脑访问https://film.video.qq.com/x/grade/?show_mession=1&aid=V0$$8:23&ptag=viphome
 
 2.按F12，点全部-标头，刷新一下，随便找一个数据包，在请求标头里有cookie
