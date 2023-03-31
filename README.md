@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://github.com/raindrop-hb"><img alt="Author" src="https://img.shields.io/badge/author-raindrop-blueviolet"/></a>
-    <img alt="PHP" src="https://img.shields.io/badge/code-Python-success"/>
+    <img alt="PHP" src="https://img.shields.io/badge/code-Python-success"/><a href="https://jq.qq.com/?_wv=1027&k=fzhZMSbP"><img alt="QQ群" src="https://img.shields.io/badge/QQ-交流群-redviolet"/></a>
 </p>
 通过腾讯视频官方接口，每天自动签到并领取v力值，并将结果push到微信。
 
@@ -50,8 +50,16 @@ agentid：应用id
 cookie：腾讯pc登录时的cookie
 
 ### 抓取腾讯视频cookie
-![image](https://user-images.githubusercontent.com/72308008/227908303-62c321e8-dfb9-4421-bcab-7a3a1caf73ea.png)
+![R`{QKUUBWW3M)VI7GLW 0KE_tmb](https://user-images.githubusercontent.com/72308008/229112182-62ec4420-c12b-44f8-805c-d2657fca0338.png)
 
-1.电脑访问https://film.video.qq.com/x/vip-center/?entry=common&hidetitlebar=1&aid=V0%24%241%3A0%242%3A8%243%3A8.7.85.27058%244%3A3%245%3A%246%3A%247%3A%248%3A999%249%3A%2410%3A&isDarkMode=0
+工具HttpCanary，腾讯视频
 
-2.按F12，点全部-标头，刷新一下，随便找一个数据包，在请求标头里有cookie
+1打开腾讯视频，打开抓包软件，有root就用HttpCanary，没root用电脑fiddler开热点给手机抓包，具体可以百度
+
+2。手机腾讯视频签到，成功后找https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/CheckIn?rpc_data=%7B%7D的包，cookie只要这几个vdevice_qimei36、
+vqq_appid、
+vqq_openid、
+vqq_access_token、
+main_login。这些都是固定的，出现图形验证就去腾讯视频手动签一次到就行了
+![image](https://user-images.githubusercontent.com/72308008/229113603-d6cd00f3-e67e-4db3-8f12-76a97a4af31e.png)
+
