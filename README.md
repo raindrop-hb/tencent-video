@@ -57,7 +57,8 @@ cookie：腾讯pc登录时的cookie
 
 1打开腾讯视频，打开抓包软件，有root就用HttpCanary，没root用电脑fiddler开热点给手机抓包，具体可以百度
 
-2。手机腾讯视频签到，成功后找https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/CheckIn?rpc_data=%7B%7D的包，cookie只要这几个vdevice_qimei36、
+2。手机腾讯视频签到，成功后找https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/CheckIn?rpc_data=%7B%7D
+的包，cookie只要这几个vdevice_qimei36、
 vqq_appid、
 vqq_openid、
 vqq_access_token、
