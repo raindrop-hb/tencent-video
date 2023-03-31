@@ -9,13 +9,22 @@ import time
 设置项
 '''
 '''腾讯视频签到'''
-cookie = ''
 push = '1' # 是否微信机器人推送，1为是，0为否，选择0则后面三项失效
 corpid = 'ww0fc7f0b4e'  # 企业ID
 secret = 'j-F4DeIhMtbbB321PWHtCrRitwqxwU'  # 应用的凭证密钥
 agentid = 1000006 #应用id
 
+'''cookie项'''
+vdevice_qimei36='066ab9df659c7906c26c0a32100012316509'
+vqq_appid='101795054'
+vqq_openid='3E68D4BDBAEE6BF42D90C2B9087CB42E'
+vqq_access_token='2B36FC406803D3FBA77CE255E3959216'
+main_login='qq'
+
+
+
 def ten_video():
+    cookie='vdevice_qimei36='+vdevice_qimei36+';vqq_appid='+vqq_appid+';vqq_openid='+vqq_openid+';vqq_access_token='+vqq_access_token+';main_login='+main_login
     url_1='https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/CheckIn?rpc_data=%7B%7D'
     headers_1={'user-agent':'Mozilla/5.0 (Linux; Android 11; M2104K10AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046237 Mobile Safari/537.36 QQLiveBrowser/8.7.85.27058',
              'Content-Type':'application/json',
