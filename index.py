@@ -15,10 +15,10 @@ secret = 'j-F4DeIhMtbbB321PWHtCrRitwqxwU'  # 应用的凭证密钥
 agentid = 1000006 #应用id
 
 '''cookie项'''
-vdevice_qimei36='066ab9df659c7906c26c0a32100012316509'
+vdevice_qimei36='066ab9df659c7906c'
 vqq_appid='101795054'
-vqq_openid='3E68D4BDBAEE6BF42D90C2B9087CB42E'
-vqq_access_token='2B36FC406803D3FBA77CE255E3959216'
+vqq_openid='3E68D4BDBAEE'
+vqq_access_token='2B36FC406803D3'
 main_login='qq'
 
 
