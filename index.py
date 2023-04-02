@@ -10,8 +10,8 @@ import time
 '''
 '''腾讯视频签到'''
 push = '1' # 是否微信机器人推送，1为是，0为否，选择0则后面三项失效
-corpid = 'ww0fc7f0b4e'  # 企业ID
-secret = 'j-F4DeIhMtbbB321PWHtCrRitwqxwU'  # 应用的凭证密钥
+corpid = 'ww0b4e'  # 企业ID
+secret = 'j-F4DetwqxwU'  # 应用的凭证密钥
 agentid = 1000006 #应用id
 
 '''cookie项'''
