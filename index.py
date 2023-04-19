@@ -48,7 +48,6 @@ def ten_video(tag,qimei36,appid,openid,access_token,vuserid,login):
     try:
         res_1 = json.loads(response_1.text)
         log = log + "\n签到获得积分:" + str(res_1['check_in_score'])
-        print(res_1)
     except:
         try:
             res_1 = json.loads(response_1.text)
@@ -64,7 +63,6 @@ def ten_video(tag,qimei36,appid,openid,access_token,vuserid,login):
         try:
             res_2 = json.loads(response_2.text)
             log=log+"\n腾讯视频领取观看积分异常,返回内容:\n"+str(res_2)
-            print(res_2)
         except:
             log = log + "\n腾讯视频领取观看积分异常,无法返回内容"
     
