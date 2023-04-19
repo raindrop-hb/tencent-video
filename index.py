@@ -24,7 +24,7 @@ import os
 
 
 
-def ten_video(tag,qimei36,appid,openid,access_token,vuserid,vusession,login):
+def ten_video(tag,qimei36,appid,openid,access_token,vuserid,login):
     #cookie='vdevice_qimei36='+qimei36+';vqq_appid='+appid+';vqq_openid='+openid+';vqq_access_token='+access_token+';main_login='+login
     cookie = 'vdevice_qimei36='+qimei36+';vqq_appid=' + appid + ';vqq_openid=' + openid + ';vqq_access_token=' + access_token + ';main_login=' + login + ';vqq_vuserid=' + vuserid
     url_1='https://vip.video.qq.com/rpc/trpc.new_task_system.task_system.TaskSystem/CheckIn?rpc_data=%7B%7D'
@@ -109,7 +109,7 @@ def main():
     print(a)
     for user in a:      
         if eval(user['enable']):
-            ten_video(user['tag'],user['vdevice_qimei36'],user['vqq_appid'],user['vqq_openid'],user['vqq_access_token'],user['vqq_vuserid'],user['vqq_vusession'],user['main_login'])
+            ten_video(user['tag'],user['vdevice_qimei36'],user['vqq_appid'],user['vqq_openid'],user['vqq_access_token'],user['vqq_vuserid'],user['main_login'])
 
 def main_handler(event, context):
     return main()
