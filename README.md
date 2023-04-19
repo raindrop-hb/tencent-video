@@ -17,7 +17,7 @@
 
 
 - [x] 每天自动执行
-- [x] 推送到微信
+- [x] 推送到微信，钉钉
 
 如有其他好的建议请提交issues
 
@@ -31,7 +31,10 @@ python 3.6
 
 2.运行时：python3.6
 
-3.代码复制上去
+3.压缩包tencent_video.zip下载，上传华为云
+
+![image](https://user-images.githubusercontent.com/72308008/233065154-4a53c7db-78dc-4db9-9419-502a2ec49ce8.png)
+
 
 4.设置-
 函数执行入口：index.main_handler
