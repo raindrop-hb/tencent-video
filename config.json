@@ -1,0 +1,65 @@
+{
+  /* 开源地址: https://github.com/raindrop-hb/tencent-video */
+  "version": "1.04",
+  "users": [
+    {
+
+      "tag": "等花开",
+      /* 填写cookie中某些段 */
+      "vdevice_qimei36": "066ab16509",
+      "vqq_appid": "10054",
+      "vqq_openid": "C51C0A49B8CBEE312322BDB",
+      "vqq_access_token": "08A894F8606E2190",
+      "vqq_vuserid": "2287",
+      "main_login": "qq",
+      /* 是否开启 */
+      "enable": "True"
+    },
+    {
+      /* 账号2 */
+      "tag": "raindrop",
+      /* 填写cookie中某些段 */
+      "vdevice_qimei36": "066a012316509",
+      "vqq_appid": "10054",
+      "vqq_openid": "3E68D4BCB42E",
+      "vqq_access_token": "27CE29216",
+      "vqq_vuserid": "3278",
+      "main_login": "qq",
+      /* 是否开启 */
+      "enable": "False"
+    },
+    {
+      /* 账号3 */
+      "vdevice_qimei36": "",
+      "vqq_appid": "",
+      "vqq_openid": "",
+      "vqq_access_token": "",
+      "vqq_vuserid": "",
+      "main_login": "",
+      /* 是否开启 */
+      "enable": "False"
+    }
+  ],
+  "push": {
+    "WeCom": {
+      /* 是否企业微信推送 */
+      "push" : "True",
+      /* 企业ID */
+      "corpid" : "ww0fc87af4e",
+      /* 应用的凭证密钥 */
+      "secret" : "j-F4DeIhMRitwqxwU",
+      /* 应用id */
+      "agentid" : "1000006"
+    },
+    "Ding": {
+      /* 是否钉钉推送 */
+      "push" : "True",
+      /* 应用凭证 */
+      "appkey" : "dinyjj",
+      /* 应用凭证 */
+      "appsecret" : "UptFE0xc4nSf4xIEzmpSiWisCpDRa",
+      /* 钉钉app-部门群-设置-机器人-webhook */
+      "webhook":"https://oapi.dingtalk.com/robot/send?access_token=78c8b77"
+    }
+  }
+}
