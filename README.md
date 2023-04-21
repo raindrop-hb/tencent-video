@@ -53,6 +53,16 @@ agentid：应用id
 
 cookie：腾讯pc登录时的cookie
 
+## 青龙面板 部署
+### 操作方法
+![image](https://user-images.githubusercontent.com/72308008/233713591-c91500ff-f7d4-4137-8e7d-a6cca866dd95.png)
+
+三个文件，index.py、push.py、config.json都要在，如果是订阅，请在文件后缀那里填py json
+
+config是配置文件，支持多账号和三个推送，执行文件为index.py
+
+
+
 ### 抓取腾讯视频cookie
 ![R`{QKUUBWW3M)VI7GLW 0KE_tmb](https://user-images.githubusercontent.com/72308008/229112182-62ec4420-c12b-44f8-805c-d2657fca0338.png)
 
