@@ -1,16 +1,17 @@
 {
   /* 开源地址: https://github.com/raindrop-hb/tencent-video */
-  "version": "1.04",
+  "version": "1.05",
   "users": [
     {
 
-      "tag": "等花开",
+      "tag": "汉堡",
       /* 填写cookie中某些段 */
-      "vdevice_qimei36": "066ab16509",
-      "vqq_appid": "10054",
-      "vqq_openid": "C51C0A49B8CBEE312322BDB",
-      "vqq_access_token": "08A894F8606E2190",
-      "vqq_vuserid": "2287",
+      "vdevice_qimei36": "066ab90012316509",
+      "vqq_appid": "101795054",
+      "vqq_openid": "C51C0A42922BDB",
+      "vqq_access_token": "08A8940588A6E2190",
+      "vqq_vuserid": "223798687",
+      "vqq_vusession": "y95fL9bkvw.N",
       "main_login": "qq",
       /* 是否开启 */
       "enable": "True"
@@ -19,11 +20,12 @@
       /* 账号2 */
       "tag": "raindrop",
       /* 填写cookie中某些段 */
-      "vdevice_qimei36": "066a012316509",
-      "vqq_appid": "10054",
-      "vqq_openid": "3E68D4BCB42E",
-      "vqq_access_token": "27CE29216",
-      "vqq_vuserid": "3278",
+      "vdevice_qimei36": "066ab100012316509",
+      "vqq_appid": "101795054",
+      "vqq_openid": "3E68D4BDBAEE6BB9087CB42E",
+      "vqq_access_token": "2B36FC406855E3959216",
+      "vqq_vuserid": "371123278",
+      "vqq_vusession": "GzeYrF47VRBQ.N",
       "main_login": "qq",
       /* 是否开启 */
       "enable": "False"
@@ -35,6 +37,7 @@
       "vqq_openid": "",
       "vqq_access_token": "",
       "vqq_vuserid": "",
+      "vqq_vusession": "",
       "main_login": "",
       /* 是否开启 */
       "enable": "False"
@@ -43,23 +46,29 @@
   "push": {
     "WeCom": {
       /* 是否企业微信推送 */
-      "push" : "True",
+      "push" : "False",
       /* 企业ID */
-      "corpid" : "ww0fc87af4e",
+      "corpid" : "ww0fc7af4e",
       /* 应用的凭证密钥 */
-      "secret" : "j-F4DeIhMRitwqxwU",
+      "secret" : "j-F4DeIhMtbbBTgatCrRitwqxwU",
       /* 应用id */
       "agentid" : "1000006"
     },
     "Ding": {
       /* 是否钉钉推送 */
-      "push" : "True",
+      "push" : "False",
       /* 应用凭证 */
-      "appkey" : "dinyjj",
+      "appkey" : "dingoqen7yjj",
       /* 应用凭证 */
-      "appsecret" : "UptFE0xc4nSf4xIEzmpSiWisCpDRa",
+      "appsecret" : "UptFE0xc4nSyaC1In7OjGHf4xIEzmpSiWisCpDRa",
       /* 钉钉app-部门群-设置-机器人-webhook */
-      "webhook":"https://oapi.dingtalk.com/robot/send?access_token=78c8b77"
+      "webhook":"https://oapi.dingtalk.com/roba0b54d18201"
+    },
+    "pushplus": {
+      /* 是否pushplus推送 */
+      "push" : "False",
+      /* pushplus  token */
+      "token" : "f62e5fea8df8f96d3d"
     }
   }
 }
