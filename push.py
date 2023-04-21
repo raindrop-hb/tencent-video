@@ -1,11 +1,10 @@
 #!/usr/bin/python3.10
 # -*- coding: utf-8 -*-
-# Copyright (C) 2023 , Inc. All Rights Reserved
-# @Time    : 2023/4/18 0:51
+# Copyright (C) 2023 , Inc. All Rights Reserved 
+# @Time    : 2023/4/19 7:45
 # @Author  : raindrop
 # @Email   : 1580925557@qq.com
 # @File    : push.py
-
 
 import requests, json,os
 
@@ -17,13 +16,19 @@ def config():
         path = ''
     with open(path + 'config.json', encoding='utf-8') as f:
         account = f.read()
-    a = account.count('/*')
+    a=account.count('/*')
     print(a)
     for i in range(a):
-        x = account.find('/*')
-        y = account.find('*/') + 2
-        account = account[:x] + account[y:]
-    account = json.loads(account)
+        x=account.find('/*')
+        y=account.find('*/')+2
+        account=account[:x]+account[y:]
+    b=account.find('"cookie":"')+10
+    c=account.find('"url"')-8
+    cookie=account[b:c]
+    print(account[b:c])
+    account=account[:b]+account[c:]
+    account=eval(account)
+    account["cookie"]=cookie
     return account
 
 
@@ -80,8 +85,29 @@ def Ding(content):
         res = requests.post(url=url, headers=headers, json=data)
         return (json.loads(res.text).get('errmsg'))
 
+def pushplus(content):
+    pushplus= config()["push"]["pushplus"]
+    print(content)
+    if not eval(pushplus["push"]):
+        print('pushplus不推送')
+    url = "http://www.pushplus.plus/send"
+    headers = {
+        "Content-Type": "application/json"
+    }
+    data = {
+        "token": pushplus["token"],
+        "title": '腾讯视频签到',
+        "content": content
+        }
+    try:
+        post(url, headers=headers, data=dumps(data))
+    except:
+        print('推送失败')
+
 def main(content):
-    Ding(content)
+    print(content)
     WeCom(content)
+    Ding(content)
+    pushplus(content)
 
 
