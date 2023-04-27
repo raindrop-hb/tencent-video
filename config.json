@@ -1,71 +1,70 @@
 {
-  /* 开源地址: https://github.com/raindrop-hb/tencent-video */
-  "version": "1.05",
-  "users": [
-    {
-
-      "tag": "汉堡",
-      /* 填写cookie中某些段 */
-      "vdevice_qimei36": "066ab90012316509",
-      "vqq_appid": "101795054",
-      "vqq_openid": "C51C0A42922BDB",
-      "vqq_access_token": "08A8940588A6E2190",
-      "vqq_vuserid": "223798687",
-      "main_login": "qq",
-      /* 是否开启 */
-      "enable": "True"
-    },
-    {
-      /* 账号2 */
-      "tag": "raindrop",
-      /* 填写cookie中某些段 */
-      "vdevice_qimei36": "066ab100012316509",
-      "vqq_appid": "101795054",
-      "vqq_openid": "3E68D4BDBAEE6BB9087CB42E",
-      "vqq_access_token": "2B36FC406855E3959216",
-      "vqq_vuserid": "371123278",
-      "main_login": "qq",
-      /* 是否开启 */
-      "enable": "False"
-    },
-    {
-      /* 账号3 */
-      "vdevice_qimei36": "",
-      "vqq_appid": "",
-      "vqq_openid": "",
-      "vqq_access_token": "",
-      "vqq_vuserid": "",
-      "main_login": "",
-      /* 是否开启 */
-      "enable": "False"
+    /* 开源地址: https://github.com/raindrop-hb/tencent-video */
+    "version": "1.05",
+    "users": [
+        {
+            "tag": "等花开",
+            /* 填写cookie中某些段 */
+            "vdevice_qimei36": "066a2100012316509",
+            "vqq_appid": "104",
+            "vqq_openid": "C51C0A429312322BDB",
+            "vqq_access_token": "08A8606E2190",
+            "vqq_vuserid": "227",
+            "main_login": "qq",
+            /* 是否开启 */
+            "enable": "False"
+        },
+        {
+            /* 账号2 */
+            "tag": "raindrop",
+            /* 填写cookie中某些段 */
+            "vdevice_qimei36": "066ab9df6590012316509",
+            "vqq_appid": "1014",
+            "vqq_openid": "3E68D4BDBAE9087CB42E",
+            "vqq_access_token": "2B36FC45E3959216",
+            "vqq_vuserid": "378",
+            "main_login": "qq",
+            /* 是否开启 */
+            "enable": "False"
+        },
+        {
+            /* 账号3 */
+            "vdevice_qimei36": "",
+            "vqq_appid": "",
+            "vqq_openid": "",
+            "vqq_access_token": "",
+            "vqq_vuserid": "",
+            "main_login": "",
+            /* 是否开启 */
+            "enable": "False"
+        }
+    ],
+    "push": {
+        "WeCom": {
+            /* 是否企业微信推送 */
+            "push": "False",
+            /* 企业ID */
+            "corpid": "ww0fc74e",
+            /* 应用的凭证密钥 */
+            "secret": "j-F4DeIhMtbbB3twqxwU",
+            /* 应用id */
+            "agentid": "1000006"
+        },
+        "Ding": {
+            /* 是否钉钉推送 */
+            "push": "False",
+            /* 应用凭证 */
+            "appkey": "dingoqw",
+            /* 应用凭证 */
+            "appsecret": "UptFE0xc4nsCpDRa",
+            /* 钉钉app-部门群-设置-机器人-webhook */
+            "webhook": "https://oapi.dingtalk.com/robot/send?access_token="
+        },
+        "pushplus": {
+            /* 是否pushplus推送 */
+            "push": "False",
+            /* pushplus  token */
+            "token": "f6d3d"
+        }
     }
-  ],
-  "push": {
-    "WeCom": {
-      /* 是否企业微信推送 */
-      "push" : "False",
-      /* 企业ID */
-      "corpid" : "ww0fc7af4e",
-      /* 应用的凭证密钥 */
-      "secret" : "j-F4DeIhMitwqxwU",
-      /* 应用id */
-      "agentid" : "1000006"
-    },
-    "Ding": {
-      /* 是否钉钉推送 */
-      "push" : "False",
-      /* 应用凭证 */
-      "appkey" : "dingoqen7yjj",
-      /* 应用凭证 */
-      "appsecret" : "UptFE0xc4nWisCpDRa",
-      /* 钉钉app-部门群-设置-机器人-webhook */
-      "webhook":"https://oapi.dingtalk.com/roba0b54d18201"
-    },
-    "pushplus": {
-      /* 是否pushplus推送 */
-      "push" : "False",
-      /* pushplus  token */
-      "token" : "f62e5fea8df8f96d3d"
-    }
-  }
 }
