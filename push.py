@@ -100,6 +100,7 @@ def pushplus(content):
         print('推送失败')
 
 def main(content):
+    print(content)
     WeCom(content)
     Ding(content)
     pushplus(content)
