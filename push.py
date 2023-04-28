@@ -6,7 +6,7 @@
 # @Email   : 1580925557@qq.com
 # @File    : push.py
 
-import requests, json,os
+import requests, json,os,re
 
 def config():
     path = os.getcwd()
@@ -22,19 +22,16 @@ def config():
         x=account.find('/*')
         y=account.find('*/')+2
         account=account[:x]+account[y:]
-    b=account.find('"cookie":"')+10
-    c=account.find('"url"')-8
-    cookie=account[b:c]
-    print(account[b:c])
-    account=account[:b]+account[c:]
-    account=eval(account)
-    account["cookie"]=cookie
+    account=re.sub(' ', '', account)
+    account = re.sub('\n', '', account)
+    print(account)    
+    account=json.loads(account)
     return account
+
 
 
 def WeCom(content):
     wx = config()["push"]["WeCom"]
-    print(content)
     if not eval(wx["push"]):
         print('企业微信不推送')
     else:
@@ -62,7 +59,6 @@ def WeCom(content):
 
 def Ding(content):
     ding = config()["push"]["Ding"]
-    print(content)
     if not eval(ding["push"]):
         print('钉钉不推送')
     else:
@@ -87,7 +83,6 @@ def Ding(content):
 
 def pushplus(content):
     pushplus= config()["push"]["pushplus"]
-    print(content)
     if not eval(pushplus["push"]):
         print('pushplus不推送')
     url = "http://www.pushplus.plus/send"
@@ -105,7 +100,6 @@ def pushplus(content):
         print('推送失败')
 
 def main(content):
-    print(content)
     WeCom(content)
     Ding(content)
     pushplus(content)
