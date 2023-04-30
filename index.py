@@ -1,7 +1,7 @@
 #!/usr/bin/python3.10
 # -*- coding: utf-8 -*-
 # Copyright (C) 2023 , Inc. All Rights Reserved
-# @Time    : 2023/4/18 0:51
+# @Time    : 2023/5/1 2:08
 # @Author  : raindrop
 # @Email   : 1580925557@qq.com
 # @File    : index.py
@@ -24,9 +24,10 @@ import os
 
 
 
-def ten_video(tag,qimei36,appid,openid,access_token,vuserid,login):
+def ten_video(tag,qimei36,appid,openid,access_token,vuserid,login,ip):
     #cookie='vdevice_qimei36='+qimei36+';vqq_appid='+appid+';vqq_openid='+openid+';vqq_access_token='+access_token+';main_login='+login
-    cookie = 'vdevice_qimei36='+qimei36+';vqq_appid=' + appid + ';vqq_openid=' + openid + ';vqq_access_token=' + access_token + ';main_login=' + login + ';vqq_vuserid=' + vuserid
+    cookie = 'vdevice_qimei36='+qimei36+';vqq_appid=' + appid + ';vqq_openid=' + openid + ';vqq_access_token=' + access_token + ';main_login=' + login + ';vqq_vuserid=' + vuserid + ';ip=' + ip
+    log=''
     time_1 = int(time.time())
     time_2 = time.localtime(time_1)
     now = time.strftime("%Y-%m-%d %H:%M:%S", time_2)
@@ -70,18 +71,17 @@ def ten_video(tag,qimei36,appid,openid,access_token,vuserid,login):
         except:
             log = log + "\n腾讯视频领取观看v力值异常,无法返回内容"
     #积分查询
-    url_3 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=get_cscore&type=1&otype=xjson'
+    url_3 = 'https://vip.video.qq.com/fcgi-bin/comm_cgi?name=spp_vscore_user_mashup&cmd=&otype=xjson&type=1'
     headers_3 = {
         'user-agent': 'Mozilla/5.0 (Linux; Android 11; M2104K10AC Build/RP1A.200720.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/89.0.4389.72 MQQBrowser/6.2 TBS/046237 Mobile Safari/537.36 QQLiveBrowser/8.7.85.27058',
         'Content-Type': 'application/json',
-        'referer': 'https://film.video.qq.com/x/vip-center/?entry=common&hidetitlebar=1&aid=V0%24%241%3A0%242%3A8%243%3A8.7.85.27058%244%3A3%245%3A%246%3A%247%3A%248%3A4%249%3A%2410%3A&isDarkMode=0',
         'cookie': cookie
-        }
+    }
     response_3 = requests.get(url_3, headers=headers_3)
     try:
         res_3 = json.loads(response_3.text)
-        log = log + "\n总积分:" + str(res_3['vip_score_total'])
-        print(res_3)
+        log = log + "\n会员等级:" + str(res_3['lscore_info']['level']) + "\n积分:" + str(
+            res_3['cscore_info']['vip_score_total']) + "\nV力值:" + str(res_3['lscore_info']['score'])
     except:
         try:
             res_3 = json.loads(response_3.text)
@@ -117,24 +117,19 @@ def config():
     with open(path + 'config.json', encoding='utf-8') as f:
         account = f.read()
     a=account.count('/*')
-    print(a)
     for i in range(a):
         x=account.find('/*')
         y=account.find('*/')+2
         account=account[:x]+account[y:]
-    account=re.sub(' ', '', account)
-    account = re.sub('\n', '', account)
-    print(account)    
     account=json.loads(account)
     return account
 
 def main():
     configs = config()
     a=configs["users"]
-    print(a)
     for user in a:      
         if eval(user['enable']):
-            ten_video(user['tag'],user['vdevice_qimei36'],user['vqq_appid'],user['vqq_openid'],user['vqq_access_token'],user['vqq_vuserid'],user['main_login'])
+            ten_video(user['tag'],user['vdevice_qimei36'],user['vqq_appid'],user['vqq_openid'],user['vqq_access_token'],user['vqq_vuserid'],user['main_login'],user['ip'])
 
 def main_handler(event, context):
     return main()
