@@ -154,9 +154,12 @@ def main():
     a=configs["users"]
     for user in a:      
         if eval(user['enable']):
-            if ip not in user:
-                ip='39.144.36.110'
-            ten_video(user['tag'],user['vdevice_qimei36'],user['vqq_appid'],user['vqq_openid'],user['vqq_access_token'],user['vqq_vuserid'],user['main_login'],user['ip'])
+            if 'ip' in user:
+                ipp=user['ip']
+            else:
+                ipp='39.144.36.110'
+            print(ipp)
+            ten_video(user['tag'],user['vdevice_qimei36'],user['vqq_appid'],user['vqq_openid'],user['vqq_access_token'],user['vqq_vuserid'],user['main_login'],ipp)
 
 def main_handler(event, context):
     return main()
