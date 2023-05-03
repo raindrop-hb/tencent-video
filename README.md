@@ -5,7 +5,7 @@
     <img alt="PHP" src="https://img.shields.io/badge/code-Python-success"/></a>
     <a href="https://jq.qq.com/?_wv=1027&k=fzhZMSbP"><img alt="QQ群" src="https://img.shields.io/badge/QQ-交流群-blackviolet"/></a>
 </p>
-通过腾讯视频官方接口，每天自动签到并领取v力值，并将结果push到微信。
+通过腾讯视频官方接口，每天自动签到并领取v力值，并将结果push到手机，助您快速升级。
 
 一个账号平均耗时为半分钟左右。放在服务器运行不需要人工干预，支持无服务器的云函数部署，每天自动push相关信息。
 
