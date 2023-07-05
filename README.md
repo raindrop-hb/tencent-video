@@ -78,3 +78,20 @@ vqq_access_token、
 main_login。这些都是固定的，出现图形验证就去腾讯视频手动签一次到就行了
 ![image](https://user-images.githubusercontent.com/72308008/229113603-d6cd00f3-e67e-4db3-8f12-76a97a4af31e.png)
 
+# donate
+
+如果该项目对您有帮助，欢迎捐赠
+
+<table>
+  <tr>
+    <th width="33.3%">支付宝</th>
+    <th width="33.3%">微信</th>
+    <th width="33.3%">QQ群</th>
+  </tr>
+  <tr></tr>
+  <tr align="center">
+    <td><img width="70%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/72308008/249005291-da996bc0-37fe-4ac7-b29b-357af69d4c28.png"></td>
+    <td><img width="70%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/72308008/249005176-6327e7d8-b69e-4100-b3d7-ee27403dabf6.png"></td>
+    <td><img width="70%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/72308008/249005430-6a9ad701-b9fa-4c88-98d4-2cbb01f7829b.png"></td>
+  </tr>
+</table>
