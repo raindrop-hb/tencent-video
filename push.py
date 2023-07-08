@@ -95,7 +95,7 @@ def pushplus(content):
         "content": content
         }
     try:
-        post(url, headers=headers, data=dumps(data))
+        requests.post(url, headers=headers, data=json.dumps(data))
     except:
         print('推送失败')
 
